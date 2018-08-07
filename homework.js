@@ -2,12 +2,32 @@
 // returns the sum of those numbers.
 
 function sum (numbers) {
-  console.log('numbers', numbers)
-  return 0
-}
+  var someNumbersTotal = 0
 
+  for (var i = 0; i < numbers.length; i++) {
+    someNumbersTotal += numbers[i];
+  }
+  return someNumbersTotal
+} 
+  
 // 2. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+
+function average (numbers) {
+  var numbersTotal = 0
+
+  if (numbers.length === 0) {
+    return
+  }
+
+  for (var i = 0; i < numbers.length; i++) {
+    numbersTotal += numbers[i];
+  }
+  return numbersTotal / numbers.length
+
+}
+
+
 
 // 3. Create a function called "intersection" that takes two arrays and
 // returns a new array that contains the elements found in both arrays.
