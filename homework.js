@@ -24,23 +24,41 @@ function average (numbers) {
     numbersTotal += numbers[i];
   }
   return numbersTotal / numbers.length
-
 }
-
-
 
 // 3. Create a function called "intersection" that takes two arrays and
 // returns a new array that contains the elements found in both arrays.
 // The order they are in does not matter, but no duplicates should be
 // in the returned array, even if they were in the input.
 
+function intersection (firstArray, secondArray) {
+
+  var combinedArray = []
+
+  for (var i=0; i < firstArray.length; i++) {
+      if (secondArray.indexOf(firstArray[i]) !== -1) {
+        combinedArray.push(firstArray[i])     }
+      }  
+  return combinedArray
+  }
+
 // 4. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+
+function minimum (array) {
+  var min 
+  for (var i = 0; i < array.length; i++) {
+    if ((typeof(min) === 'undefined') || array[i] < min) {
+      min = array[i];
+    }
+}
+return min
+}
 
 // 5. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
 // implement sorting ourselves, however.
-//
+
 // A "selection sort" is one of the most simple sorting algorithms. To implement it,
 // you start with an unsorted array of numbers. You search the array and find the
 // smallest number in the array. You then insert that into a new array as the first
@@ -65,7 +83,15 @@ function average (numbers) {
 // and returns an object with the keys "name" and "dob" (date of birth) with
 // those values.
 
-// 7. Create a function called "calculateAge" that takes a user created from
+function createUser (name, date) {
+  var user = {}
+
+  user.name=name 
+  user.dob=date
+  
+  return user 
+
+  // 7. Create a function called "calculateAge" that takes a user created from
 // createUser and a Date object considered the current date, and calculates the user's
 // age in years on that date. You can use your code from yesterday's homework.
 
